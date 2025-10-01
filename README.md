@@ -1,14 +1,8 @@
-# ResourceServer
+# Basic Resource Service
 
-This project has basic APIs which can only be accessed after proving authorized access token in the headers of the request URI.
+## Versions
+- Java: 21
+- Spring Boot: 3.5.6
 
-**Keycloak** authorization server is used to first generate a token from the credentials, then that code is exchanged with
-an access token which can further be used for APIs.
-
-
-3 Ports
-- keycloak server: 8081
-- Spring Boot Resource Server: 8082
-
-Note: To start the keycloak server type the following commands:
-- kc.bat (./kc.sh in Linux or macOS) start-dev (simpl start for prod anvironment)--http-port=8820 (optional)
+This is a simple Spring Boot microservice which runs in port 8082.
+So, through API Gateway, the APIs from this microservice can be accessed with oauth2 security.
